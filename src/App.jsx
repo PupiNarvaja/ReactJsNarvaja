@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import NavBar from './components/NavBar'  //No me lo importó automaticamente, lo hice manualmente.
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header" id="header">
+        <NavBar />
+        <div className="reactive--container">
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
@@ -16,7 +20,7 @@ function App() {
           </button>
         </p>
         <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
+          <code>This</code> site is running perfectly :D
         </p>
         <p>
           <a
