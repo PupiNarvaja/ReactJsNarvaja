@@ -1,0 +1,69 @@
+header {
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    top: 0;
+    background-color: #282c34;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+#header ul li::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 2px;
+    background: white;
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    transition: all .3s;
+} 
+#header ul li:hover::after {
+    width: 100%;
+    left: 0;
+}  
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: oblique;
+    /* font-size: 3rem; */
+    /* color: white; */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .navbar ul li a{
+    color: white;
+    text-decoration: none;
+} */
+
+
+/* .navbar ul li {
+    margin: 0 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+} */
+
+
+
+
+
+/* .navbar ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+} */
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+} */

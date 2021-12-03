@@ -2,48 +2,8 @@
     font-size: 16px;
 }
 
-/* #header {
-    display: flex;
-    flex-flow: row nowrap;
-} */
 
-h1 {
-    font-size: 3rem;
-    font-style: oblique;
-}
-
-#header ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#header ul li {
-    padding: 10px 5px;
-    width: fit-content;
-    margin: 0 auto;
-}
-#header ul li::after {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 2px;
-    background: white;
-    position: relative;
-    left: 50%;
-    bottom: 0;
-    transition: all .3s;
-} 
-#header ul li:hover::after {
-    width: 100%;
-    left: 0;
-}  
-#header ul li a{
-    color: white;
-    text-decoration: none;
-
-}
-
-#header .reactive--container {
+/* #header .reactive--container {
     animation: App-logo-go 2s ;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
@@ -59,4 +19,4 @@ h1 {
     100% {
     transform: translate(-40vw, 0);
     }
-  }
+  } */
