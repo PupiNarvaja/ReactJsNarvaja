@@ -1,15 +1,15 @@
+:root {
+  font-size: 16px;
+}
 
-  
+#header {
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  top: 0;
+  background-color: #282c34;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
 
-
-/* @keyframes App-logo-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
+/* CHILDREN es otra forma de pasar un componente como prop. */
