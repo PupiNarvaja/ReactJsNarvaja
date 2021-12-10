@@ -15,23 +15,23 @@ export const Item = ({prod}) => {
                         <div className="space-x-2 flex text-sm">
                             <label>
                                 <input className="sr-only peer" name="size" type="radio" value="xs" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer">XS</div>
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
                             </label>
                             <label>
                                 <input className="sr-only peer" name="size" type="radio" value="s" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer">S</div>
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
                             </label>
                             <label>
                                 <input className="sr-only peer" name="size" type="radio" value="m" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer">M</div>
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
                             </label>
                             <label>
                                 <input className="sr-only peer" name="size" type="radio" value="l" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer">L</div>
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
                             </label>
                             <label>
                                 <input className="sr-only peer" name="size" type="radio" value="xl" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer">XL</div>
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
                             </label>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ export const Item = ({prod}) => {
                             </svg>
                         </button>
                     </div>
-                    <p className="text-sm text-gray-700">Envios gratis en CABA.</p>
+                    <p className="text-sm text-gray-700">Envios gratis a CABA.</p>
                 </form>
             </div>
         </>
