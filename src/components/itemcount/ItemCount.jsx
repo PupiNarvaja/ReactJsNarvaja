@@ -29,14 +29,3 @@ export default ItemCount;
 
 // api ----> Pedazo de código con funciones
 // Callback ---> Función pasada por parametro.
-
-
-// const task = new Promise((resolve, reject) => {
-//     // Tarea. PUYEDEN SER O NO ASINCRÓNICAS. 
-// }); // Instanciar un objeto.
-
-// task.then() Se usa para ver el cómputo de la tarea. Es siempre asincrónica.
-// task.catch() captura errores. Hace que la app no se rompa aún con errores.
-// task.finally() Se ejecutará si o si a lo ultimo.
-
-// Cuando se usa 2 then normalmente es por llamados a api, 1er then recibe la api en JSON, y el 2do la parsea a objeto.

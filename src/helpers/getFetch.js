@@ -1,5 +1,5 @@
 //========= SECCIÓN DE PRODUCTOS =========
-class Producto {  //-------------------------------------> Clase constructora de "Productos".
+class Producto {
     constructor (id, tipo, precio, cantidad, imagen, descripcion) {
         this.id = id;
         this.tipo = tipo;
@@ -10,18 +10,33 @@ class Producto {  //-------------------------------------> Clase constructora de
     }
 }
 
-let watch = new Producto(15, "Smart watch 1", 3500, 4, "src/media/watch1.jpg", "Resistente a salpicaduras.");
-let watch1 = new Producto(16, "Smart watch 2", 7700, 7, "src/media/watch2.jpg", "Reloj inteligente.");
-let watch2 = new Producto(17, "Smart watch 3", 17000, 3, "src/media/watch3.jpg", "Reloj inteligente.");
-let watch3 = new Producto(18, "Smart watch 4", 5500, 9, "src/media/watch4.jpg", "Reloj inteligente.");
-let watch4 = new Producto(19, "Smart watch 5", 7000, 6, "src/media/watch5.jpg", "Reloj inteligente.");
-let watch5 = new Producto(20, "Smart watch 6", 5000, 6, "src/media/watch6.jpg", "Reloj inteligente.");
-let watch6 = new Producto(21, "Smart watch 7", 10000, 1, "src/media/watch7.jpg", "Reloj inteligente.");
+let jacket = new Producto(0, "Blue jean jacket", 3500, 4, "src/media/p0.jpg", "Most recently design.");
+let jacket1 = new Producto(1, "Black baggy jacket", 7700, 7, "src/media/p1.jpg", "Reloj inteligente.");
+let jacket2 = new Producto(2, "Black Uniqlo jacket", 17000, 3, "src/media/p2.jpg", "Reloj inteligente.");
+let jacket3 = new Producto(3, "Lightblue jean jacket", 5500, 9, "src/media/p3.jpg", "Reloj inteligente.");
+let jacket4 = new Producto(4, "Black leather jacket", 7000, 6, "src/media/p4.jpg", "Reloj inteligente.");
+let jacket5 = new Producto(5, "Ripped blue jean jacket", 5000, 6, "src/media/p5.jpg", "Reloj inteligente.");
+let jacket6 = new Producto(6, "Dar jean jacket", 10000, 1, "src/media/p6.jpg", "Reloj inteligente.");
 
-let productos = [watch, watch1, watch2, watch3, watch4, watch5, watch6];
+let productos = [jacket, jacket1, jacket2, jacket3, jacket4, jacket5, jacket6];
 
 export const getFetch = new Promise((resolve) => {
     setTimeout(() => {
         resolve(productos);
     }, [3000]);
 });
+
+
+// DENTRO DE UN USEEFFECT!!!!
+// Acepta un 2do parametro: body
+                    //   |          ---------------> Entoncees quedaría el 1er como POST y el 2do mandar datos.
+// fetch("URL de la api", {})
+// .then(resp => resp.json()) ---------->  Devuelve un JSON.
+// .then(data = console.log(data)) --------> Ahora devuelve un array de objetos.
+
+
+// MediaStreamAudioDestinationNodeheader
+// body -->  aca irran nuestros productos.
+
+
+//Exacto pedro, podes llamar a tu array de productos y hacer un find si queréis que te devuelva solo un produto

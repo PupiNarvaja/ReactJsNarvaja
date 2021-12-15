@@ -1,15 +1,26 @@
 :root {
   font-size: 16px;
 }
+/* ----- Scroll bar customization ----- */
+body::-webkit-scrollbar {
+  width: 13px;
+  background: rgba(0, 0, 0, 0);
+}
+body::-webkit-scrollbar-thumb {
+  background: #2dd4bf;
+}
 
+/* ----- Header ----- */
 #header {
   font-family: 'Nunito', sans-serif;
   width: 100%;
   top: 0;
-  background-color: #282c34;
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(45deg, rgba(0,0,0,1) 87%, rgba(45,212,191,1) 13%);
+  background: -webkit-linear-gradient(45deg, rgba(0,0,0,1) 87%, rgba(45,212,191,1) 13%);
+  background: linear-gradient(45deg, rgba(0,0,0,1) 87%, rgba(45,212,191,1) 13%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#2dd4bf",GradientType=1);
   height: 100px;
   display: flex;
   align-items: center;
 }
-
-/* CHILDREN es otra forma de pasar un componente como prop. */
