@@ -17,7 +17,7 @@ const ItemListContainer = ({greeting}) => {
     return(
         <>
             <div className="m-20">
-                <h3 className="font-mono max-w-s mx-auto text-4xl text-center">{greeting}</h3>
+                <h3 className="font-mayorMonoDisplay font-semibold max-w-s mx-auto text-4xl text-center">{greeting}</h3>
             </div>
             <div className="w-full flex flex-row flex-wrap my-0 mx-auto justify-evenly">
                 {loading ? <h1 className="max-w-min mx-auto text-4xl">Loading...</h1> : <ItemList productos={productos} />}

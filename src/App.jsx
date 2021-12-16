@@ -11,7 +11,7 @@ const App = () => {
             <header className="App-header" id="header">
                 <NavBar cartWidget={CartWidget}></NavBar>
             </header>
-            <ItemListContainer greeting="Welcome to This." />
+            <ItemListContainer greeting="this is Awesome" />
             <ItemCount stock= {5} valorInicial={1}/>
             <ItemDetailContainer />
         </div>
