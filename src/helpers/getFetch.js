@@ -1,3 +1,13 @@
+import jacketImg0 from '/src/media/p0.jpg'
+import jacketImg1 from '/src/media/p1.jpg'
+import jacketImg2 from '/src/media/p2.jpg'
+import jacketImg3 from '/src/media/p3.jpg'
+import jacketImg4 from '/src/media/p4.jpg'
+import jacketImg5 from '/src/media/p5.jpg'
+import jacketImg6 from '/src/media/p6.jpg'
+
+
+
 //========= SECCIÓN DE PRODUCTOS =========
 class Producto {
     constructor (id, tipo, precio, cantidad, imagen, descripcion) {
@@ -10,20 +20,25 @@ class Producto {
     }
 }
 
-let jacket = new Producto(0, "Blue jean jacket", 3500, 4, "src/media/p0.jpg", "Most recently design.");
-let jacket1 = new Producto(1, "Black baggy jacket", 7700, 7, "src/media/p1.jpg", "Reloj inteligente.");
-let jacket2 = new Producto(2, "Black Uniqlo jacket", 17000, 3, "src/media/p2.jpg", "Reloj inteligente.");
-let jacket3 = new Producto(3, "Lightblue jean jacket", 5500, 9, "src/media/p3.jpg", "Reloj inteligente.");
-let jacket4 = new Producto(4, "Black leather jacket", 7000, 6, "src/media/p4.jpg", "Reloj inteligente.");
-let jacket5 = new Producto(5, "Ripped blue jean jacket", 5000, 6, "src/media/p5.jpg", "Reloj inteligente.");
-let jacket6 = new Producto(6, "Dar jean jacket", 10000, 1, "src/media/p6.jpg", "Reloj inteligente.");
+let jacket = new Producto(0, "jackets", 3500, 4, {jacketImg0}, "Most recently design.");
+let jacket1 = new Producto(1, "jackets", 7700, 7, {jacketImg1}, "Most recently design.");
+let jacket2 = new Producto(2, "jackets", 17000, 3, {jacketImg2}, "Most recently design.");
+let jacket3 = new Producto(3, "jackets", 5500, 9, {jacketImg3}, "Most recently design.");
+let jacket4 = new Producto(4, "jackets", 7000, 6, {jacketImg4}, "Most recently design.");
+let jacket5 = new Producto(5, "jackets", 5000, 6, {jacketImg5}, "Most recently design.");
+let jacket6 = new Producto(6, "jackets", 10000, 1, {jacketImg6}, "Most recently design.");
 
-let productos = [jacket, jacket1, jacket2, jacket3, jacket4, jacket5, jacket6];
+let shirt = new Producto(7, "shirts", 5500, 9, {jacketImg0}, "Most recently design.");
+let shirt1 = new Producto(8, "shirts", 7000, 6, {jacketImg1}, "Most recently design.");
+let shirt2 = new Producto(9, "shirts", 5000, 6, {jacketImg2}, "Most recently design.");
+let shirt3 = new Producto(10, "shirts", 10000, 1, {jacketImg3}, "Most recently design.");
+
+let productos = [jacket, jacket1, jacket2, jacket3, jacket4, jacket5, jacket6, shirt, shirt1, shirt2, shirt3];
 
 export const getFetch = new Promise((resolve) => {
     setTimeout(() => {
         resolve(productos);
-    }, [3000]);
+    }, [2000]);
 });
 
 

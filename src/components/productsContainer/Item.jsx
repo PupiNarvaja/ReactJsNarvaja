@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Item.css";
 export const Item = ({prod}) => {
   return (
@@ -21,7 +22,7 @@ export const Item = ({prod}) => {
             </div>
           </div>
           <div className="flex items-baseline my-6">
-            <div className="space-x-3 flex text-sm font-medium">
+            {/* <div className="space-x-3 flex text-sm font-medium">
               <label>
                 <input
                   className="sr-only peer"
@@ -77,22 +78,24 @@ export const Item = ({prod}) => {
                   XL
                 </div>
               </label>
-            </div>
+            </div> */}
           </div>
           <div className="flex space-x-2 mb-4 text-sm font-medium">
             <div className="flex space-x-4">
-              <button
-                className="px-5 h-12 uppercase font-semibold tracking-wider border-2 border-black bg-teal-400 text-black hover:bg-teal-300"
-                type="submit"
-              >
-                Buy now
-              </button>
-              <button
+              <Link to={`/item/${prod.id}`}>
+                <button
+                  className="px-5 h-12 uppercase font-semibold tracking-wider border-2 border-black bg-teal-400 text-black hover:bg-teal-300"
+                  type="submit"
+                >
+                  View product
+                </button>
+              </Link>
+              {/* <button
                 className="px-5 h-12 uppercase font-semibold tracking-wider border border-gray-200 text-gray-900"
                 type="button"
               >
                 Add to cart
-              </button>
+              </button> */}
             </div>
             <button
               className="flex-none flex items-center justify-center w-12 h-12 text-black"

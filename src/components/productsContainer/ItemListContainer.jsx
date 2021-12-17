@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { getFetch } from "../../helpers/getFetch";
 import {ItemList} from "./ItemList"
 
@@ -6,13 +7,25 @@ const ItemListContainer = ({greeting}) => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
 
+    const {id} = useParams()
     
-    useEffect(() => { //usamos apis con useEffect.
-        getFetch
-        .then(resp => setProductos(resp))
-        .catch(err => console.log(err))
-        .finally(() => setLoading(false))
-    }, [2000]);
+    useEffect(() => {
+        if (id) {
+            getFetch
+            .then(resp => setProductos(resp.filter(prod => prod.tipo === id)))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+        } else {
+            getFetch
+            .then(resp => setProductos(resp))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+        }
+
+        console.log(id);
+        console.log(getFetch);
+        console.log(productos);
+    }, [id]);
 
     return(
         <>
