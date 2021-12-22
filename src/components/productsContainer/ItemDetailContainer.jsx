@@ -19,5 +19,3 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer
-
-// setItem(resp.find((item) => item.id === 0 ))})

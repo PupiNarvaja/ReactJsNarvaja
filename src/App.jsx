@@ -4,7 +4,7 @@ import ItemListContainer from "./components/productsContainer/ItemListContainer"
 import ItemDetailContainer from "./components/productsContainer/ItemDetailContainer"
 import CartWidget from './components/cart/CartWidget';
 import NavBar from "./components/navbar/NavBar";
-import ItemCount from "./components/itemcount/ItemCount";
+import Cart from "./components/cart/Cart";
 
 const App = () => {
     
@@ -34,7 +34,7 @@ const App = () => {
                     <Route
                         exact
                         path="/cart"
-                        element="cart cart cart cart cart cart cart cart cart cart cart cart"
+                        element={ <Cart /> }
                     />
                 </Routes>
             </div>
@@ -43,4 +43,23 @@ const App = () => {
 };
 
 export default App;
-// (<ItemCount stock={5} valorInicial={1} />))
+
+//  Esto es true? -----> Entonces hace esto --> Si no, hace esto.
+// value > inicial ? setValue(value + 1) : alert("Compra maxima")
+
+
+// useEffect(() => {
+//     console.log("Llamada a la api")
+// }, []) //Se ejecuta una sola vez si declaramos array vacio. Si le ponemos por ejemplo otro estado, detectará cuando este cambie y activa el efecto.
+
+// api ----> Pedazo de código con funciones
+// Callback ---> Función pasada por parametro.
+
+
+// 2 Tipos de eventos: Los que se ejecutan solos y los que son consecuentes de una accion.
+
+// props, cambios de estados u ocurra un evento RE-RENDERIZAN COSAS
+//  Por eso usamos removeAddEventListener. 
+// Dentro del return debemos incluir un remove, para DESMONTAR el evento.
+// e.preventDefault()
+// e.stopPropagation ---> Ya que los eventos suben, lo usamos poara que solo afecte el evento afecte solo al componente que queremos y no a sus ancestros.

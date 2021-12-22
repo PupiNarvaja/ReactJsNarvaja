@@ -90,12 +90,12 @@ export const Item = ({prod}) => {
                   View product
                 </button>
               </Link>
-              {/* <button
+              <button
                 className="px-5 h-12 uppercase font-semibold tracking-wider border border-gray-200 text-gray-900"
                 type="button"
               >
                 Add to cart
-              </button> */}
+              </button>
             </div>
             <button
               className="flex-none flex items-center justify-center w-12 h-12 text-black"
