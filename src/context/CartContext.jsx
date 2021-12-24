@@ -27,12 +27,11 @@ function CartContextProvider({ children }) { //Se refresque todo y quede actuali
     }
 
     const removeItem = (item) => {
-        if (cartList.includes(x => x.id === item.id) === true) {
-            const index = cartList.findIndex(i => i.id === item.id)
+        const index = cartList.findIndex(i => i.id === item.id)
+        if (index > -1) {
             cartList.splice(index, 1)
             setcartList(cartList)
-        } else {
-            console.log("Producto NO removido!");
+            console.log(cartList);
         }
     }
 
