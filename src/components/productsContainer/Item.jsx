@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import "./Item.css";
 export const Item = ({prod}) => {
   return (
-    <>
-      <div className="flex p-6 font-mono max-w-xl container mx-3 my-9">
+    <div>
+      <div className="flex p-6 font-mono max-w-xl container mx-3 my-9 bg-white">
         <div className="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
           <img
             src={prod.imagen}
@@ -121,6 +121,6 @@ export const Item = ({prod}) => {
           </p>
         </form>
       </div>
-    </>
+    </div>
   );
 }

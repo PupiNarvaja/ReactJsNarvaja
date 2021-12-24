@@ -25,3 +25,32 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
 }
+
+.bgHoverText {
+  position: relative;
+}
+
+.bgHoverText::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #5cfae5;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+.bgHoverText:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.bt-teal-400 {
+  background-color: #04f06a;
+}
+
+
+/*#ffd200 yellow*/
