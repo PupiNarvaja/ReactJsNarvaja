@@ -1,126 +1,61 @@
 import { Link } from "react-router-dom";
 import "./Item.css";
 export const Item = ({prod}) => {
-  return (
-    <div>
-      <div className="flex p-6 font-mono max-w-xl container mx-3 my-9 bg-white">
-        <div className="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
-          <img
-            src={prod.imagen}
-            alt={prod.tipo}
-            className="absolute z-10 inset-0 w-full h-full object-cover"
-          />
-        </div>
-        <form className="flex-auto pl-6">
-          <div className="relative flex flex-wrap items-baseline pb-6 before:bg-black before:absolute before:-top-6 before:bottom-0 before:-left-60 before:-right-6">
-            <h1 className="relative w-full flex-none mb-2 text-2xl font-semibold text-white">
-              {prod.tipo}
-            </h1>
-            <div className="relative text-lg text-white">${prod.precio}</div>
-            <div className="relative uppercase text-teal-400 ml-3">
-              In stock
+    return (
+        <>
+            <div className="flex font-sans w-[85%] container mx-auto my-6 bg-white rounded-lg flex-col sm:max-w-lg sm:flex-row">
+                <div className="flex-none w-[100%] h-80 relative sm:w-48 sm:h-[100%]">
+                    <img src={prod.imagen} alt={prod.title} className="absolute inset-0 w-full h-full object-cover rounded-lg" />
+                </div>
+                <form className="flex-auto p-6">
+                    <div className="flex flex-wrap">
+                        <h1 className="flex flex-auto items-center text-xl font-bold text-gray-900">{prod.title}</h1>
+                        
+                        <button className="flex-none flex items-center justify-center w-9 h-9 rounded-md text-gray-300 border border-gray-200" type="button" aria-label="Like">
+                            <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-gray-200">
+                        <div className="text-lg font-semibold text-gray-900">${prod.precio}</div>
+                        {/* <div className="space-x-2 flex text-sm">
+                            <label>
+                                <input className="sr-only peer" name="size" type="radio" value="xs" />
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
+                            </label>
+                            <label>
+                                <input className="sr-only peer" name="size" type="radio" value="s" />
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
+                            </label>
+                            <label>
+                                <input className="sr-only peer" name="size" type="radio" value="m" />
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
+                            </label>
+                            <label>
+                                <input className="sr-only peer" name="size" type="radio" value="l" />
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
+                            </label>
+                            <label>
+                                <input className="sr-only peer" name="size" type="radio" value="xl" />
+                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
+                            </label>
+                        </div> */}
+                    </div>
+                    <div className="flex space-x-4 mb-6 text-sm font-medium">
+                        <div className="flex-auto flex space-x-4">
+                            <Link to={`/item/${prod.id}`}>
+                                <button className="h-10 px-6 font-semibold leading-4 rounded-lg text-black bg-special-yellow transition ease hover:shadow-lg" type="submit">View product</button>
+                            </Link>
+                            <Link to={`/cart`}>
+                                <button className="h-10 px-6 font-semibold leading-4 rounded-lg text-white bg-special-black transition ease hover:shadow-xl" type="button">Add to cart</button>
+                            </Link>
+                        </div>
+                        
+                    </div>
+                    <p className="text-sm text-gray-700">Free shipping buying 2 or more products.</p>
+                </form>
             </div>
-          </div>
-          <div className="flex items-baseline my-6">
-            {/* <div className="space-x-3 flex text-sm font-medium">
-              <label>
-                <input
-                  className="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="xs"
-                />
-                <div className="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                  XS
-                </div>
-              </label>
-              <label>
-                <input
-                  className="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="s"
-                />
-                <div className="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                  S
-                </div>
-              </label>
-              <label>
-                <input
-                  className="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="m"
-                />
-                <div className="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                  M
-                </div>
-              </label>
-              <label>
-                <input
-                  className="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="l"
-                />
-                <div className="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                  L
-                </div>
-              </label>
-              <label>
-                <input
-                  className="sr-only peer"
-                  name="size"
-                  type="radio"
-                  value="xl"
-                />
-                <div className="relative w-10 h-10 flex items-center justify-center text-black peer-checked:bg-black peer-checked:text-white before:absolute before:z-[-1] before:top-0.5 before:left-0.5 before:w-full before:h-full peer-checked:before:bg-teal-400">
-                  XL
-                </div>
-              </label>
-            </div> */}
-          </div>
-          <div className="flex space-x-2 mb-4 text-sm font-medium">
-            <div className="flex space-x-4">
-              <Link to={`/item/${prod.id}`}>
-                <button
-                  className="px-5 h-12 uppercase font-semibold tracking-wider border-2 border-black bg-teal-400 text-black hover:bg-teal-300"
-                  type="submit"
-                >
-                  View product
-                </button>
-              </Link>
-              <button
-                className="px-5 h-12 uppercase font-semibold tracking-wider border border-gray-200 text-gray-900"
-                type="button"
-              >
-                Add to cart
-              </button>
-            </div>
-            <button
-              className="flex-none flex items-center justify-center w-12 h-12 text-black"
-              type="button"
-              aria-label="Like"
-            >
-              <svg
-                width="20"
-                height="20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                />
-              </svg>
-            </button>
-          </div>
-          <p className="text-xs leading-6 text-gray-500">
-            Free shipping buying 2 or more products.
-          </p>
-        </form>
-      </div>
-    </div>
-  );
+        </>
+    )
 }

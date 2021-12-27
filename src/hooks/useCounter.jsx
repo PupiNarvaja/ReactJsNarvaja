@@ -8,11 +8,11 @@ export const useCounter = (stock, estadoInicial) => {
     const decrement = () => {
         counter > estadoInicial ? setCounter((prev) => prev - 1) : console.log("Compra mínima alcanzada.");
     };
-    const addToCart = () => {
-        setCounter(estadoInicial);
-    };
+    // const addToCart = () => {
+    //     setCounter(estadoInicial);
+    // };
     const reset = () => {
         setCounter(estadoInicial);
     };
-    return { counter, increment, decrement, addToCart, reset };
+    return { counter, increment, decrement, reset };
 };

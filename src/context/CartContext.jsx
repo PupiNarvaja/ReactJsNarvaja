@@ -4,7 +4,7 @@ export const CartContext = createContext([])
 
 export const useCartContext = () => useContext(CartContext)
 
-function CartContextProvider({ children }) { //Se refresque todo y quede actualizado.
+export const CartContextProvider = ({ children }) => { //Se refresque todo y quede actualizado.
 
     const [cartList, setcartList] = useState([])
     
@@ -50,5 +50,3 @@ function CartContextProvider({ children }) { //Se refresque todo y quede actuali
         </CartContext.Provider>
     )
 }
-
-export default CartContextProvider

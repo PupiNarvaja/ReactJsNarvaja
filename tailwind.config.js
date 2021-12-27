@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       fontFamily: {
         mayorMonoDisplay: ['Major Mono Display']
+      },
+      screens: {
+        'xs': '280px'
       }
     },
   },

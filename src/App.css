@@ -8,7 +8,12 @@ body::-webkit-scrollbar {
   background: rgba(0, 0, 0, 0);
 }
 body::-webkit-scrollbar-thumb {
-  background: #2dd4bf;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background: rgba(255, 253, 0, 1);
+}
+body {
+  background-color: rgba(247, 247, 247, 1);
 }
 
 /* ----- Header ----- */
@@ -16,11 +21,12 @@ body::-webkit-scrollbar-thumb {
   font-family: 'Nunito', sans-serif;
   width: 100%;
   top: 0;
-  background: rgb(0,0,0);
+  background: black;
+  /* background: rgb(0,0,0);
   background: -moz-linear-gradient(45deg, rgba(0,0,0,1) 83%, rgba(45,212,191,1) 13%);
   background: -webkit-linear-gradient(45deg, rgba(0,0,0,1) 83%, rgba(45,212,191,1) 13%);
   background: linear-gradient(45deg, rgba(0,0,0,1) 83%, rgba(45,212,191,1) 13%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#2dd4bf",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#2dd4bf",GradientType=1); */
   height: 100px;
   display: flex;
   align-items: center;
@@ -38,7 +44,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   inset: 0 0 0 0;
-  background: #5cfae5;
+  background: black;
   z-index: -1;
   transition: transform .3s ease;
 }
@@ -48,9 +54,45 @@ body::-webkit-scrollbar-thumb {
   transform-origin: bottom left;
 }
 
+.bgHoverText:hover {
+  color: rgba(255, 253, 0, 1);
+}
+
 .bt-teal-400 {
   background-color: #04f06a;
 }
 
+.special-yellow {
+  color: rgba(255, 253, 0, 1);
+}
+.bg-special-yellow {
+  background-color: rgba(255, 253, 0, 1);
+}
+
+.special-black {
+  color: rgba(26, 26, 26, 1);
+}
+.bg-special-black {
+  background-color: rgba(26, 26, 26, 1);
+}
+
+.special-grey {
+  color: rgba(247, 247, 247, 1);
+}
+.bg-special-grey {
+  background-color: rgba(247, 247, 247, 1);
+}
+
+.border-spec-yellow {
+  border-color: rgba(255, 253, 0, 1);
+}
+
 
 /*#ffd200 yellow*/
+
+/*rgba(255, 253, 0, 1) UI yellow*/
+/*rgba(26, 26, 26, 1) UI black*/
+/*rgba(247, 247, 247, 1) UI grey*/
+/* 
+webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
+box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%); */
