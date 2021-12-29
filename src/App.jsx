@@ -92,3 +92,13 @@ export default App;
 
 // const { algo que queramos pasar del contexto a acá } = useContext(ContextApp)
 // Y podemos usar lo que pasemos del context.
+
+// Técnicas de renderizado.
+
+// 1_ Condicional con retorno temprano.
+// 2_ Condicional con si si.
+// 3_ ternario inline.  return <h2>{condition === true ? opcionA : opcionB}</h2> --------> Se crea un único componente ---> Mejor performance.
+// 4_ ternario para aplicar styles. style= {{ color: condition ? 'red' : 'green' }} También aplica para CLASSNAME.
+
+// Memo from react ----> Recomendado para listas largas y evitar largos re-renders. N o recomendado para listas sencillas.    USAR EN ITEMLIST!!!!!!
+// Recibe 2 parametros o 1. si eees uno, poasa un componente. si son 2, es componente o funcion que evalua condiciones.

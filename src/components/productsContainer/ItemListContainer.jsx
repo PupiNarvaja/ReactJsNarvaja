@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getFetch } from "../../helpers/getFetch";
-import {ItemList} from "./ItemList"
+import { ItemList } from "./ItemList"
 
 const ItemListContainer = ({greeting}) => {
     const [productos, setProductos] = useState([])
@@ -23,8 +23,8 @@ const ItemListContainer = ({greeting}) => {
         }
 
         console.log(id);
-        console.log(getFetch);
-        console.log(productos);
+        // console.log(getFetch);
+        // console.log(productos);
     }, [id]);
 
     return(

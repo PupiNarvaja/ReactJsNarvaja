@@ -5,7 +5,7 @@
 /* ----- Scroll bar customization ----- */
 body::-webkit-scrollbar {
   width: 13px;
-  background: rgba(0, 0, 0, 0);
+  background: rgb(0, 0, 0, .9);
 }
 body::-webkit-scrollbar-thumb {
   border: 1px solid grey;

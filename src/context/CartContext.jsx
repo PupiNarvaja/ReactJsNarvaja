@@ -10,20 +10,13 @@ export const CartContextProvider = ({ children }) => { //Se refresque todo y que
     
     const addToCart = (item) => {
         const index = cartList.findIndex(i => i.id === item.id)
-
-        if (index > -1) {
-            const oldCantidad = cartList[index].cantidad 
-            console.log(oldCantidad);
+        if (index > -1) { 
+            const oldCantidad = cartList[index].cantidad
             cartList.splice(index, 1)
             setcartList([...cartList, { ...item, cantidad: item.cantidad + oldCantidad }])
         } else {
             setcartList([...cartList, item])
         }
-        // const oldCantidad = cartList[index].cantidad 
-        // console.log(oldCantidad);
-        // cartList.splice(index, 1)
-        // setcartList([...cartList, { ...item, cantidad: item.cantidad + oldCantidad }]) :
-        // setcartList([...cartList, item])
     }
 
     const removeItem = (item) => {
@@ -31,7 +24,7 @@ export const CartContextProvider = ({ children }) => { //Se refresque todo y que
         if (index > -1) {
             cartList.splice(index, 1)
             setcartList(cartList)
-            console.log(cartList);
+            console.log(cartList)
         }
     }
 
