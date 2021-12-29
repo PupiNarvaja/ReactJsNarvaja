@@ -1,35 +1,11 @@
-import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
 import Button from "../button/Button"
+import { useState } from "react"
 
 const Cart = () => {
 
-    const { cartList, deleteCart, addToCart, removeItem }  = useCartContext()
-
-    const [total, setTotal] = useState(0)
-    // const reducer = (previousValue, currentValue) => previousValue + currentValue
-        const pricePerProd = (cartList.map(prod => prod.precio * prod.cantidad))
-        console.log(pricePerProd);
-    
-    const showTotal = () => {
-        useEffect(() => {
-            setTotal(...total + pricePerProd)
-        }, [addToCart, removeItem])
-        
-        console.log(total);
-    }
-  
-
-
-
-    // total = 0 ? "" : total = pricePerProd.reduce()
-    
-    // useEffect(() => {
-    //     setTotal(totalToPay.reduce(pricePerProd))
-    //     console.log(pricePerProd);
-    // }, [cartList])
-
+    const { cartList, deleteCart, addToCart, removeItem, total }  = useCartContext()
 
     // Verifica si el cart está vacío retorna esto. Caso contrario, retorna el listado de los productos dentro del cart.
     if (cartList.length === 0) {
@@ -55,7 +31,7 @@ const Cart = () => {
             </div>) }</div>
             <div className="w-full mx-auto my-28 flex justify-evenly">
                 <button onClick={deleteCart} className="px-8 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600">Delete cart</button>
-                <h2 className="text-2xl">Total: ${  }</h2>
+                <h2 className="text-2xl">Total: ${ total() }</h2>
             </div>
         </div>
     )

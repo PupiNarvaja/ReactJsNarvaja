@@ -24,7 +24,6 @@ export const CartContextProvider = ({ children }) => { //Se refresque todo y que
         if (index > -1) {
             cartList.splice(index, 1)
             setcartList(cartList)
-            console.log(cartList)
         }
     }
 
@@ -32,12 +31,31 @@ export const CartContextProvider = ({ children }) => { //Se refresque todo y que
         setcartList([])
     }
 
+    const total = () => {
+        const totalToPay = cartList.reduce((prev, curr) => prev + curr.cantidad * curr.precio, 0)
+        let formatoDeMoneda = new Intl.NumberFormat('es-ES')
+        return formatoDeMoneda.format(totalToPay)
+    }
+
+    const cartCounter = () => {
+        if (cartList.length > 0) {
+            const cartCounter = cartList.reduce((prev, curr) => prev + curr.cantidad, 0)
+            console.log("Hay algo");
+            return cartCounter
+        } else if (cartList.length === 0){
+            console.log("No hay nada");
+            return ""
+        }
+    }
+
     return (
         <CartContext.Provider value={{
             cartList,
+            cartCounter,
             addToCart,
             removeItem,
-            deleteCart
+            deleteCart,
+            total
         }}>
             { children }
         </CartContext.Provider>

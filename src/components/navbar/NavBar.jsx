@@ -24,5 +24,3 @@ const NavBar = ({cartWidget}) => {
 
 import './NavBar.css';
 export default NavBar;
-
-// TAP HIGHLIGHT COLOR EN CADA SPAN DE LOS QUE GIRAN
