@@ -11,13 +11,13 @@ class Producto {
     }
 }
 
-let jacket = new Producto(0, "Dark jean jacket", "jackets", 3500, 4, "https://res.cloudinary.com/this/image/upload/v1640141590/p0_belgdx.jpg", "Most recently design.");
-let jacket1 = new Producto(1, "Baggy jacket", "jackets", 7700, 7, "https://res.cloudinary.com/this/image/upload/v1640141590/p1_s8wqla.jpg", "Most recently design.");
-let jacket2 = new Producto(2, "Uniqlo jacket", "jackets", 17000, 3, "https://res.cloudinary.com/this/image/upload/v1640141590/p2_fmfm7d.jpg", "Most recently design.");
-let jacket3 = new Producto(3, "Light jean jacket", "jackets", 5500, 9, "https://res.cloudinary.com/this/image/upload/v1640141590/p3_u5n7ej.jpg", "Most recently design.");
+let jacket = new Producto(0, "Dark Jean Jacket", "jackets", 3500, 4, "https://res.cloudinary.com/this/image/upload/v1640141590/p0_belgdx.jpg", "Most recently design.");
+let jacket1 = new Producto(1, "Baggy Jacket", "jackets", 7700, 7, "https://res.cloudinary.com/this/image/upload/v1640141590/p1_s8wqla.jpg", "Most recently design.");
+let jacket2 = new Producto(2, "Uniqlo Jacket", "jackets", 17000, 3, "https://res.cloudinary.com/this/image/upload/v1640141590/p2_fmfm7d.jpg", "Most recently design.");
+let jacket3 = new Producto(3, "Light Jean Jacket", "jackets", 5500, 9, "https://res.cloudinary.com/this/image/upload/v1640141590/p3_u5n7ej.jpg", "Most recently design.");
 let jacket4 = new Producto(4, "Coat", "jackets", 7000, 6, "https://res.cloudinary.com/this/image/upload/v1640141590/p4_v7rvgj.jpg", "Most recently design.");
-let jacket5 = new Producto(5, "Ripped light jean jacket", "jackets", 5000, 6, "https://res.cloudinary.com/this/image/upload/v1640141590/p5_e7mpfd.jpg", "Most recently design.");
-let jacket6 = new Producto(6, "Black jacket", "jackets", 10000, 1, "https://res.cloudinary.com/this/image/upload/v1640141590/p6_tmqo1u.jpg", "Most recently design.");
+let jacket5 = new Producto(5, "Ripped Light Jean Jacket", "jackets", 5000, 6, "https://res.cloudinary.com/this/image/upload/v1640141590/p5_e7mpfd.jpg", "Most recently design.");
+let jacket6 = new Producto(6, "Black Jacket", "jackets", 10000, 1, "https://res.cloudinary.com/this/image/upload/v1640141590/p6_tmqo1u.jpg", "Most recently design.");
 
 let shirt = new Producto(7, "Shirt0", "shirts", 5500, 9, "https://res.cloudinary.com/this/image/upload/v1640141590/p0_belgdx.jpg", "Most recently design.");
 let shirt1 = new Producto(8, "Shirt1", "shirts", 7000, 6, "https://res.cloudinary.com/this/image/upload/v1640141590/p1_s8wqla.jpg", "Most recently design.");

@@ -32,7 +32,7 @@ export const CartContextProvider = ({ children }) => { //Se refresque todo y que
     }
 
     const total = () => {
-        const totalToPay = cartList.reduce((prev, curr) => prev + curr.cantidad * curr.precio, 0)
+        const totalToPay = cartList.reduce((prev, curr) => prev + curr.cantidad * curr.price, 0)
         let formatoDeMoneda = new Intl.NumberFormat('es-ES')
         return formatoDeMoneda.format(totalToPay)
     }

@@ -22,8 +22,8 @@ const Cart = () => {
             <div>{ cartList.map(prod => <div key={prod.id} className="py-8 px-8 my-6 mx-16 flex flex-row justify-between bg-white rounded-lg">
                 <div className="flex flex-row justify-evenly w-40">
                     <p>{prod.cantidad}</p>
-                    <p>{prod.tipo}</p>
-                    <p>${prod.precio}</p>
+                    <p>{prod.category}</p>
+                    <p>${prod.price}</p>
                 </div>
                 <button onClick={() => removeItem(prod)} className="flex px-6 py-2 rounded-lg bg-red-500 text-white hover:bg-red-600">Remove item
                     <img src="https://img.icons8.com/metro/18/ffffff/delete.png" className="ml-2 my-auto"/>

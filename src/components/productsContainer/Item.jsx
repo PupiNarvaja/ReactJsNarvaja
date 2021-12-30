@@ -5,7 +5,7 @@ export const Item = ({prod}) => {
         <>
             <div className="flex font-sans w-[85%] container mx-auto my-6 bg-white rounded-lg flex-col sm:max-w-lg sm:flex-row">
                 <div className="flex-none w-[100%] h-80 relative sm:w-48 sm:h-[100%]">
-                    <img src={prod.imagen} alt={prod.title} className="absolute inset-0 w-full h-full object-cover rounded-lg" />
+                    <img src={prod.img} alt={prod.title} className="absolute inset-0 w-full h-full object-cover rounded-lg" />
                 </div>
                 <form className="flex-auto p-6">
                     <div className="flex flex-wrap">
@@ -18,7 +18,7 @@ export const Item = ({prod}) => {
                         </button>
                     </div>
                     <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-gray-200">
-                        <div className="text-lg font-semibold text-gray-900">${prod.precio}</div>
+                        <div className="text-lg font-semibold text-gray-900">${prod.price}</div>
                         {/* <div className="space-x-2 flex text-sm">
                             <label>
                                 <input className="sr-only peer" name="size" type="radio" value="xs" />

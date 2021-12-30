@@ -22,12 +22,12 @@ const ItemDetail = ({item}) => {
 
     return (
         <div className="flex flex-col justify-around items-center w-[85%] max-w-xs mx-auto my-6 pb-10 rounded-lg bg-white mt-20 md:flex-row md:max-w-[80%] md:p-8 md:justify-between lg:max-w-3xl lg:p-12">
-            <img src={item.imagen} className="rounded-lg w-full md:w-[250px] py-auto"></img>
+            <img src={item.img} className="rounded-lg w-full md:w-[250px] py-auto"></img>
             <div className="h-[330px] md:w-[375px] md:pl-8 md:flex md:flex-col md:justify-between">
                 <ul className="w-[200px] mx-auto">
                     <li className="font-sans font-bold py-2 text-xl md:pb-6 md:pt-0">{item.title}</li>
-                    <li className="font-sans font-semibold py-2 text-xl">${item.precio}</li>
-                    <li className="font-sans font-semibold py-2 text-sm">{item.descripcion}</li>
+                    <li className="font-sans font-semibold py-2 text-xl">${item.price}</li>
+                    <li className="font-sans font-semibold py-2 text-sm">{item.description}</li>
                 </ul>
 
                 {/* Verifica si existe el item dentro del carrito. De ser asi, muestra boton para ir al cart. Caso contrario, ofrece agregarlo y sumar o restar unidades. */}
