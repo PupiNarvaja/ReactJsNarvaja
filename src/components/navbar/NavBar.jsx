@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const NavBar = ({cartWidget}) => {
     return (
@@ -20,7 +20,7 @@ const NavBar = ({cartWidget}) => {
             </div>
         </nav>
     )
-};
+}
 
-import './NavBar.css';
-export default NavBar;
+import './NavBar.css'
+export default NavBar

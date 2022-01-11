@@ -18,3 +18,47 @@
 
 /* TEAL-400 ES #2dd4bf */
 /* rgb(45, 212, 191) */
+
+/* Estilos del Skelet loader. */
+
+.loading {
+    background:
+      linear-gradient(
+        -70deg,
+        #ececec 0%,
+        #ececec 40%,
+        #f2f2f2 50%,
+        #ececec 60%,
+        #ececec 100%
+      ) repeat;
+    background-size: 400% 100%;
+    animation: gradient 2s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+  }
+
+.skeleton {
+  animation: spawn 1.5s ease-in-out forwards 1;
+}
+
+@keyframes spawn {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skeleton ~ .skeleton {
+  animation-delay: 50ms;
+}
+.skeleton ~ .skeleton ~ .skeleton{
+  animation-delay: 100ms;
+}

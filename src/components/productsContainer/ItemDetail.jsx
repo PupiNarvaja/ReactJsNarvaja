@@ -9,7 +9,6 @@ const ItemDetail = ({item}) => {
     const { cartList, addToCart } = useCartContext()
 
     const onAdd = (cantidad) => {
-        console.log(cantidad);
         setgoToCart(true);
         addToCart({ ...item, cantidad:cantidad }) // ---> Le agregamos una nueva propiedad al objeto producto.
     }
@@ -17,8 +16,6 @@ const ItemDetail = ({item}) => {
     const [goToCart, setgoToCart] = useState(false);
 
     const index = cartList.findIndex(i => i.id === item.id)
-    
-    console.log(cartList);
 
     return (
         <div className="flex flex-col justify-around items-center w-[85%] max-w-xs mx-auto my-6 pb-10 rounded-lg bg-white mt-20 md:flex-row md:max-w-[80%] md:p-8 md:justify-between lg:max-w-3xl lg:p-12">
