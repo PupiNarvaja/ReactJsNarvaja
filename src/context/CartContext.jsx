@@ -21,21 +21,45 @@ export const CartContextProvider = ({ children }) => {
 
     const addQuantity = (item) => {
         if (item.stock > item.cantidad) {
-            const index = cartList.findIndex(i => i.id === item.id)
-            cartList.splice(index, 1)
-            setcartList([...cartList , {...item, cantidad: item.cantidad + 1}])
+            item.cantidad += 1
+            setcartList([...cartList])
         } else {
-            console.log(item.stock)
+            Swal.fire({
+                position: 'bottom',
+                icon: 'warning',
+                title: 'Maximum quantity selected.',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInUp animate__faster'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutDown animate__faster'
+                },
+                showConfirmButton: false,
+                backdrop: `rgba(0,0,0, 0.3)`,
+                timer: 1600
+            })
         }
     }
 
     const substractQuantity = (item) => {
         if (item.cantidad > 1) {
-            const index = cartList.findIndex(i => i.id === item.id)
-            cartList.splice(index, 1)
-            setcartList([...cartList , {...item, cantidad: item.cantidad - 1}])
+            item.cantidad -= 1
+            setcartList([...cartList])
         } else {
-            console.log(item.cantidad) //CREAR CARTELES DE ERRORES PARA ACÁ Y EN EL FORM
+            Swal.fire({
+                position: 'bottom',
+                icon: 'warning',
+                title: 'Minimum quantity selected.',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInUp animate__faster'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutDown animate__faster'
+                },
+                showConfirmButton: false,
+                backdrop: `rgba(0,0,0, 0.3)`,
+                timer: 1600
+            })
         }
     }
 

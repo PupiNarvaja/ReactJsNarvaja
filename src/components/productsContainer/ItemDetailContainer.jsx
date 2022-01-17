@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getFetch } from "../../helpers/getFetch";
 import ItemDetail from "./ItemDetail";
 import { collection, doc, getDoc, getDocs, getFirestore } from 'firebase/firestore'
-import { ItemDetailSkeleton } from "./ItemDetailSkeleton";
+import { ItemDetailSkeleton } from "./ItemDetailSkeleton"
+import { NotFound } from "../NotFound/NotFound";
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true)
 
-    const {id} = useParams();
-
+    const {id} = useParams()
     
     useEffect(() => {
         const db = getFirestore()

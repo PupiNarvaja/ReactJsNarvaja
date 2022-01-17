@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import "./App.css";
-import ItemListContainer from "./components/productsContainer/ItemListContainer";
+import "./App.css"
+import ItemListContainer from "./components/productsContainer/ItemListContainer"
 import ItemDetailContainer from "./components/productsContainer/ItemDetailContainer"
-import CartWidget from './components/cart/CartWidget';
-import NavBar from "./components/navbar/NavBar";
-import Cart from "./components/cart/CartContainer";
-import {CartContextProvider} from './context/CartContext';
+import Cart from "./components/cart/CartContainer"
+import {CartContextProvider} from './context/CartContext'
+import { NotFound } from './components/NotFound/NotFound'
+import Header from './components/header/Header'
 
 const App = () => {
     
@@ -13,20 +13,17 @@ const App = () => {
         <CartContextProvider>
             <BrowserRouter>
                 <div className="App">
-                    <header className="App-header" id="header">
-                        <NavBar cartWidget={CartWidget}>
-                        </NavBar>
-                    </header>
+                    <Header />
                     <Routes>
                         <Route
                             exact
                             path="/"
-                            element={ <ItemListContainer greeting={<div>this is <span className="bgHoverText">Awesome</span></div> } /> }
+                            element={ <ItemListContainer greeting={ "this is Awesome" } /> }
                         />
                         <Route
                             exact
                             path="/category/:id"
-                            element={ <ItemListContainer /> }
+                            element={ <ItemListContainer greeting={ "these are our " }/> }
                         />
                         <Route
                             exact
@@ -38,6 +35,10 @@ const App = () => {
                             path="/cart"
                             element={ <Cart /> }
                         />
+                        <Route
+                            path="*"
+                            element={<NotFound />}
+                        />
                     </Routes>
                 </div>
             </BrowserRouter>
@@ -45,7 +46,7 @@ const App = () => {
     );
 };
 
-export default App;
+export default App; //<span className="bgHoverText">Awesome</span>
 
 //  Esto es true? -----> Entonces hace esto --> Si no, hace esto.
 // value > inicial ? setValue(value + 1) : alert("Compra maxima")
