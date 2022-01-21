@@ -5,7 +5,7 @@ import ItemDetailContainer from "./components/productsContainer/ItemDetailContai
 import Cart from "./components/cart/CartContainer"
 import {CartContextProvider} from './context/CartContext'
 import { NotFound } from './components/NotFound/NotFound'
-import Header from './components/header/Header'
+import HeaderContainer from './components/header/HeaderContainer'
 
 const App = () => {
     
@@ -13,7 +13,7 @@ const App = () => {
         <CartContextProvider>
             <BrowserRouter>
                 <div className="App">
-                    <Header />
+                    <HeaderContainer />
                     <Routes>
                         <Route
                             exact

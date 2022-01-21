@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mayorMonoDisplay: ['Major Mono Display']
+        mayorMonoDisplay: ['Major Mono Display'],
+        nunito: ['Nunito, sans-serif'],
+        roboto: ['Roboto']
       },
       screens: {
         'xs': '280px'

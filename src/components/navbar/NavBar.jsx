@@ -1,23 +1,16 @@
 import { Link } from 'react-router-dom'
 
-const NavBar = ({cartWidget}) => {
+const NavBar = ({ cartWidget }) => {
     return (
-        <nav className="navbar flex justify-between w-10/12 mx-auto my-0">
-            <Link to="/">
-                <div>
-                    <h1 className="text-5xl text-white glitch" data-text="This"></h1>
+        <nav className="navbar hidden md:flex flex-row flex-nowrap items-center">
+            <ul className="flex font-sans flex-row flex-nowrap items-center">
+                <li className="mx-5 my-0 text-2xl cursor-pointer"><Link to="/" className="font-sans text-white no-underline">Featured</Link></li>
+                <li className="mx-5 my-0 text-2xl cursor-pointer"><Link to="/category/jackets" className="font-sans text-white no-underline">Jackets</Link></li>
+                <li className="mx-5 my-0 text-2xl cursor-pointer"><Link to="/category/shirts" className="font-sans text-white no-underline">Shirts</Link></li>
+                <div className="cart-bg">
+                { cartWidget() }
                 </div>
-            </Link>
-            <div className="flex flex-flow flex-nowrap items-center">
-                <ul className="flex font-sans flex-row flex-nowrap items-center">
-                    <li className="mx-5 my-0 text-2xl cursor-pointer"><Link to="/" className="font-sans text-white no-underline">Featured</Link></li>
-                    <li className="mx-5 my-0 text-2xl cursor-pointer"><Link to="/category/jackets" className="font-sans text-white no-underline">Jackets</Link></li>
-                    <li className="mx-5 my-0 text-2xl cursor-pointer"><Link to="/category/shirts" className="font-sans text-white no-underline">Shirts</Link></li>
-                    <div className="cart-bg">
-                    { cartWidget() }
-                    </div>
-                </ul>
-            </div>
+            </ul>
         </nav>
     )
 }
