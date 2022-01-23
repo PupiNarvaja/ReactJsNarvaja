@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
-import Button from "../button/Button"
 import { useState } from "react"
 import CartList from "./CartList"
 import { addDoc, collection, doc, getDoc, getDocs, getFirestore, Timestamp, updateDoc, writeBatch } from 'firebase/firestore'

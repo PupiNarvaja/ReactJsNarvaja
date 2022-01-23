@@ -1,4 +1,4 @@
-import "./Item.css";
+import "./Item.css"
 
 export const ItemDetailSkeleton = () => {
     return(

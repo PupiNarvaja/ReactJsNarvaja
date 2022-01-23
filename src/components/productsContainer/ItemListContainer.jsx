@@ -11,9 +11,6 @@ const ItemListContainer = ({greeting}) => {
     const {id} = useParams()
     
     useEffect(() => {
-
-        // const queryCollection = id ?
-
         const db = getFirestore()
         const queryCollection = collection(db, "products")
         if (id) {

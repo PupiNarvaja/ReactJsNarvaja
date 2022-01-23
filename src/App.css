@@ -1,6 +1,6 @@
 :root {
   font-size: 16px;
-  -webkit-tap-highlight-color: rgb(45, 212, 191, .2);
+  -webkit-tap-highlight-color: rgb(45, 212, 191, 0); /*.2*/
 }
 /* ----- Scroll bar customization ----- */
 body::-webkit-scrollbar {
@@ -16,6 +16,7 @@ body {
   background-color: rgba(247, 247, 247, 1);
 }
 
+/* ----- Hover button ----- */
 .bgHoverText {
   position: relative;
 }
@@ -42,6 +43,7 @@ body {
   color: rgba(255, 253, 0, 1);
 }
 
+/* ----- Custom colors ----- */
 .bt-teal-400 {
   background-color: #04f06a;
 }
@@ -70,7 +72,6 @@ body {
 .border-spec-yellow {
   border-color: rgba(255, 253, 0, 1);
 }
-
 
 /*#ffd200 yellow*/
 

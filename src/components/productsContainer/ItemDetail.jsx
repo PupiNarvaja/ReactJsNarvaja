@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Link } from 'react-router-dom'
 import { useCartContext } from "../../context/CartContext"
-
 import ItemCount from "../itemcount/ItemCount"
 import { NotFound } from "../NotFound/NotFound"
 
@@ -33,7 +32,7 @@ const ItemDetail = ({item}) => {
                     <li className="font-sans font-semibold py-2 text-sm">{item.description}</li>
                 </ul>
 
-                {/* Verifica si existe el item dentro del carrito. De ser asi, muestra boton para ir al cart. Caso contrario, ofrece agregarlo y sumar o restar unidades. */}
+                {/* If the item is in cart, a button will be deployed linked to the cart page. Meanwhile if it is not in cart, there will be options such as add to cart, substract or increment quantity. */}
                 { index > -1 ? (
                     <div className="flex flex-col items-center pb-6"><p className="text-sm text-green-500">Already in cart.</p><Link to="/cart"><button className="py-2 px-6 mt-4 mx-auto border rounded-lg bg-black text-white hover:bg-neutral-700">Go to cart</button></Link><Link to="/"><button className="py-2 px-6 mt-4 mx-auto border rounded-lg bg-black text-white hover:bg-neutral-700">Continue shopping</button></Link></div>
                 ) : (

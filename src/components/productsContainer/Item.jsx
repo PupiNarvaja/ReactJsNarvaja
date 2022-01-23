@@ -19,28 +19,6 @@ export const Item = ({prod}) => {
                     </div>
                     <div className="flex items-baseline mt-4 mb-6 pb-6 border-b border-gray-200">
                         <div className="text-lg font-semibold text-gray-900">${prod.price}</div>
-                        {/* <div className="space-x-2 flex text-sm">
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="xs" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
-                            </label>
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="s" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
-                            </label>
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="m" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
-                            </label>
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="l" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
-                            </label>
-                            <label>
-                                <input className="sr-only peer" name="size" type="radio" value="xl" />
-                                <div className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-700 peer-checked:font-semibold peer-checked:bg-gray-900 peer-checked:text-white cursor-pointer"></div>
-                            </label>
-                        </div> */}
                     </div>
                     <div className="flex space-x-4 mb-6 text-sm font-medium">
                         <div className="flex-auto flex space-x-4">
