@@ -23,10 +23,10 @@ export const Item = ({prod}) => {
                     <div className="flex space-x-4 mb-6 text-sm font-medium">
                         <div className="flex-auto flex space-x-4">
                             <Link to={`/item/${prod.id}`}>
-                                <button className="h-10 px-6 font-semibold leading-4 rounded-lg text-black bg-special-yellow transition ease hover:shadow-lg" type="submit">View product</button>
+                                <button className="h-10 px-[.9rem] sm:px-6 font-semibold leading-4 rounded-lg text-black bg-special-yellow transition ease hover:shadow-lg" type="submit">View product</button>
                             </Link>
                             <Link to={`/cart`}>
-                                <button className="h-10 px-6 font-semibold leading-4 rounded-lg text-white bg-special-black transition ease hover:shadow-xl" type="button">Add to cart</button>
+                                <button className="h-10 px-[.9rem] sm:px-6 font-semibold leading-4 rounded-lg text-white bg-special-black transition ease hover:shadow-xl" type="button">Add to cart</button>
                             </Link>
                         </div>
                         

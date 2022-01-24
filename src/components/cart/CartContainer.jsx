@@ -26,13 +26,13 @@ const Cart = () => {
         // It verifies that the inputs are empty. Shows a warning message if true.
         if (dataForm.name === "" || dataForm.email === "" || dataForm.phone === "" || dataForm.confirmation === "") {
             e.preventDefault()
-            setWarning(<div className="w-[440px] px-8 py-6 bg-amber-50 border-l-4 border-l-amber-400"> 
+            setWarning(<div className="min-w-full px-8 py-6 bg-amber-50 border-l-4 border-l-amber-400"> 
                 <p className="text-amber-500 flex flex-row"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/18/000000/external-warning-weather-dreamstale-lineal-dreamstale.png" className="h-4 mr-1"/>There are empty fields. Please fill them.</p>
             </div>)
         } else if (dataForm.confirmation !== dataForm.email) {
             // It verifies that both e-mails are equal. Shows a warning message if true.
             e.preventDefault()
-            setWarning(<div className="w-[440px] px-8 py-6 bg-amber-50 border-l-4 border-l-amber-400"> 
+            setWarning(<div className="min-w-full px-8 py-6 bg-amber-50 border-l-4 border-l-amber-400"> 
                 <p className="text-amber-500 flex flex-row"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/18/000000/external-warning-weather-dreamstale-lineal-dreamstale.png" className="h-4 mr-1"/>The e-mails are different. Please make sure they match.</p>
             </div>)
         } else {
