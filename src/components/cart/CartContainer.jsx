@@ -9,7 +9,7 @@ import { data } from "autoprefixer"
 const Cart = () => {
     const { cartList, deleteCart, total }  = useCartContext()
     
-    const totalToPay = cartList.reduce((prev, curr) => prev + curr.cantidad * curr.price, 0)
+    const totalToPay = cartList.reduce((prev, curr) => prev + curr.quantity * curr.price, 0)
     
     const [warning, setWarning] = useState("")
     const [dataForm, setDataForm] = useState({
@@ -23,14 +23,14 @@ const Cart = () => {
     }
 
     const placeOrder = (e) => {
-        // It verifies that the inputs are empty. Shows a warning message if true.
+        // It verifies if the inputs are empty. Shows a warning message if true.
         if (dataForm.name === "" || dataForm.email === "" || dataForm.phone === "" || dataForm.confirmation === "") {
             e.preventDefault()
             setWarning(<div className="min-w-full px-8 py-6 bg-amber-50 border-l-4 border-l-amber-400"> 
                 <p className="text-amber-500 flex flex-row"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/18/000000/external-warning-weather-dreamstale-lineal-dreamstale.png" className="h-4 mr-1"/>There are empty fields. Please fill them.</p>
             </div>)
         } else if (dataForm.confirmation !== dataForm.email) {
-            // It verifies that both e-mails are equal. Shows a warning message if true.
+            // It verifies if the e-mails are different . Shows a warning message if true.
             e.preventDefault()
             setWarning(<div className="min-w-full px-8 py-6 bg-amber-50 border-l-4 border-l-amber-400"> 
                 <p className="text-amber-500 flex flex-row"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/18/000000/external-warning-weather-dreamstale-lineal-dreamstale.png" className="h-4 mr-1"/>The e-mails are different. Please make sure they match.</p>
@@ -38,7 +38,7 @@ const Cart = () => {
         } else {
             // If everything is correct, it proceeds to place the order.
             e.preventDefault()
-            setWarning(<div><img src="https://img.icons8.com/material-outlined/24/000000/spinner--v2.png" alt="loading icon"/></div>)
+            setWarning(<div className="flex justify-center items-center"><img src="https://img.icons8.com/material-outlined/24/000000/spinner--v2.png" alt="loading icon"/></div>)
             let order = {}
             order.buyer = dataForm
             order.total = totalToPay
@@ -47,7 +47,7 @@ const Cart = () => {
                 const id = prod.id;
                 const title = prod.title;
                 const price = prod.price;
-                const quantity = prod.cantidad;
+                const quantity = prod.quantity;
                 
                 return {id, title, quantity, price}
             })
@@ -87,16 +87,16 @@ const Cart = () => {
                     
                 }
                 
-                const items = []
-                
-                // If the cart is empty, it returns this. 
-                if (cartList.length === 0) {
-                    return  (<div className="flex flex-col mt-20 mx-auto w-max">
-                    <h2 className="font-sans font-thin text-2xl">It seems like your cart is empty.</h2>
-                    <div className="mx-auto">
-                        <Link to="/"><button className="h-10 px-4 mt-12 mx-auto w-60 font-semibold leading-4 rounded-lg text-black bg-special-yellow transition ease hover:shadow-lg">Go back to main page.</button></Link>
-                    </div>
-                </div>)
+    // If the cart is empty, it returns this. 
+    if (cartList.length === 0) {
+        return  (
+            <div className="flex flex-col justify-center h-[80vh] mx-auto w-max">
+                <h2 className="font-sans font-thin text-xl sm:text-2xl">It seems like your cart is empty.</h2>
+                <div className="mx-auto">
+                    <Link to="/"><button className="h-10 px-4 mt-12 mx-auto w-60 font-semibold leading-4 rounded-lg text-black bg-special-yellow transition ease hover:shadow-lg">Go back to main page.</button></Link>
+                </div>
+            </div>
+        )
     }
     // Otherwise, it returns this.
     return (

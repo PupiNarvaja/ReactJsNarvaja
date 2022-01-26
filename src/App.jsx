@@ -1,14 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import "./App.css"
 import ItemListContainer from "./components/productsContainer/ItemListContainer"
 import ItemDetailContainer from "./components/productsContainer/ItemDetailContainer"
 import Cart from "./components/cart/CartContainer"
 import {CartContextProvider} from './context/CartContext'
 import { NotFound } from './components/NotFound/NotFound'
 import HeaderContainer from './components/header/HeaderContainer'
+import "./App.css"
 
 const App = () => {
-    
     return (
         <CartContextProvider>
             <BrowserRouter>
@@ -23,7 +22,7 @@ const App = () => {
                         <Route
                             exact
                             path="/category/:id"
-                            element={ <ItemListContainer greeting={ "these are our " }/> }
+                            element={ <ItemListContainer greeting={ "these are our " } /> }
                         />
                         <Route
                             exact
@@ -35,9 +34,15 @@ const App = () => {
                             path="/cart"
                             element={ <Cart /> }
                         />
+                        {/* <Route
+                            exact
+                            path="/favorites"
+                            element={ <Cart /> }
+                        /> */}
                         <Route
+                            exact
                             path="*"
-                            element={<NotFound />}
+                            element={ <NotFound /> }
                         />
                     </Routes>
                 </div>

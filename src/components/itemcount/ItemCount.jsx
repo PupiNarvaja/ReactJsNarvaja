@@ -1,8 +1,8 @@
-import { useCounter } from '../../hooks/useCounter';
+import { useCounter } from '../../hooks/useCounter'
 
-const ItemCount = ({stock, valorInicial, onAdd}) => {
+const ItemCount = ({ stock, valorInicial, onAdd }) => {
 
-    const { counter, minMaxQty, increment, decrement } = useCounter(stock, valorInicial);
+    const { counter, minMaxQty, increment, decrement } = useCounter(stock, valorInicial)
     
     return (
         <div className="flex justify-center items-center flex-col w-[200px] h-40 mx-auto">
@@ -14,7 +14,7 @@ const ItemCount = ({stock, valorInicial, onAdd}) => {
             </div>
             <button onClick={() => onAdd(counter)} className="mt-4 px-4 py-2 border border-spec-yellow rounded-lg bg-special-yellow text-black font-semibold container">Add to cart</button>
         </div>
-    );
+    )
 }
 
-export default ItemCount;
+export default ItemCount

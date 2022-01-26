@@ -11,17 +11,17 @@ export const CartContextProvider = ({ children }) => {
     const addToCart = (item) => {
         const index = cartList.findIndex(i => i.id === item.id)
         if (index > -1) { 
-            const oldQuantity = cartList[index].cantidad
+            const oldQuantity = cartList[index].quantity
             cartList.splice(index, 1)
-            setcartList([...cartList, { ...item, cantidad: item.cantidad + oldQuantity }])
+            setcartList([...cartList, { ...item, quantity: item.quantity + oldQuantity }])
         } else {
             setcartList([...cartList, item])
         }
     }
 
     const addQuantity = (item) => {
-        if (item.stock > item.cantidad) {
-            item.cantidad += 1
+        if (item.stock > item.quantity) {
+            item.quantity += 1
             setcartList([...cartList])
         } else {
             Swal.fire({
@@ -42,8 +42,8 @@ export const CartContextProvider = ({ children }) => {
     }
 
     const substractQuantity = (item) => {
-        if (item.cantidad > 1) {
-            item.cantidad -= 1
+        if (item.quantity > 1) {
+            item.quantity -= 1
             setcartList([...cartList])
         } else {
             Swal.fire({
@@ -72,14 +72,14 @@ export const CartContextProvider = ({ children }) => {
     }
     
     const total = () => {
-        const totalToPay = cartList.reduce((prev, curr) => prev + curr.cantidad * curr.price, 0)
+        const totalToPay = cartList.reduce((prev, curr) => prev + curr.quantity * curr.price, 0)
         let moneyFormat = new Intl.NumberFormat('es-ES')
         return moneyFormat.format(totalToPay)
     }
 
     const cartCounter = () => {
         if (cartList.length > 0) {
-            const cartCounter = cartList.reduce((prev, curr) => prev + curr.cantidad, 0)
+            const cartCounter = cartList.reduce((prev, curr) => prev + curr.quantity, 0)
             return cartCounter
         } else if (cartList.length === 0){
             return ""

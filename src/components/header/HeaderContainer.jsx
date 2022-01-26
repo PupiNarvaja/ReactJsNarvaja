@@ -13,14 +13,15 @@ const HeaderContainer = () => {
         setOpen(!open)
     }
 
-    return(
+    return (
         <>
             <header className="fixed z-10 flex items-center justify-between w-full nunito top-0 bg-black h-[100px] px-6 md:px-20" id="header">
                 <Link to="/">
                     <div>
-                        <h1 className="roboto italic text-6xl h-full w-[100px] left-20 text-white">This</h1>
+                        <h1 className="roboto italic text-6xl h-full w-[100px] left-20 text-white" translate="no">This</h1>
                     </div>
                 </Link>
+                {/* On small screens, a menu button will be displayed. NavBar disappears, menu button appears. */}
                 <NavBar cartWidget={CartWidget} open={open}/>
                 <MenuButton handleOpen={handleOpen} open={open} />
                 <Menu open={open} handleOpen={handleOpen} cartWidget={CartWidget} />   

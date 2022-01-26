@@ -72,12 +72,3 @@ body {
 .border-spec-yellow {
   border-color: rgba(255, 253, 0, 1);
 }
-
-/*#ffd200 yellow*/
-
-/*rgba(255, 253, 0, 1) UI yellow*/
-/*rgba(26, 26, 26, 1) UI black*/
-/*rgba(247, 247, 247, 1) UI grey*/
-/* 
-webkit-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%);
-box-shadow: 10px 10px 14px 1px rgb(0 0 0 / 20%); */

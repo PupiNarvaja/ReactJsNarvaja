@@ -21,7 +21,7 @@ const CartItem = ({ prod }) => {
                 </div>
                 <div className="flex flex-row items-center mx-auto">
                     <button onClick={ ()=> addQuantity(prod) } className="p-2 font-bold text-xl">+</button>
-                    <p className="mx-4">x{prod.cantidad}</p>
+                    <p className="mx-4">x{prod.quantity}</p>
                     <button onClick={ ()=> substractQuantity(prod) } className="p-2 font-bold text-xl">-</button>
                 </div>
             </div>

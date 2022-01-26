@@ -1,6 +1,7 @@
-import "./Item.css";
+import "./Item.css"
 
 const ItemSkeleton = () => {
+    // It renders 6 times (skeleton.length) a loading card.
     const skeletons = ["a", "b", "c", "d", "e", "f"]
 
     return (skeletons.map(skel => <div key={skel} className="flex w-[85%] container mx-auto my-6 bg-white rounded-lg flex-col sm:max-w-lg sm:flex-row skeleton">
@@ -21,7 +22,8 @@ const ItemSkeleton = () => {
                 </div>
                 <div className="w-64 h-5"></div>
             </div>
-        </div>))
+        </div>)
+    )
 }
 
 export default ItemSkeleton
