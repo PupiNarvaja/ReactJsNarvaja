@@ -6,7 +6,7 @@ const Menu = ({ open, handleOpen, cartWidget }) => {
         <div className="navWrapper animate__animated animate__slideInRight z-20 w-full h-[100vh] flex flex-col justify-start items-center bg-black fixed top-[100px] right-0">
             <nav>
                 <ul className="flex font-sans flex-col flex-nowrap items-center mt-20">
-                    <li className="my-5 text-2xl cursor-pointer"><Link to="/" onClick={handleOpen} className="font-sans text-white no-underline">Featured</Link></li>
+                    <li className="my-5 text-2xl cursor-pointer"><Link to="/" onClick={handleOpen} className="font-sans text-white no-underline">Home</Link></li>
                     <li className="my-5 text-2xl cursor-pointer"><Link to="/category/jackets" onClick={handleOpen} className="font-sans text-white no-underline">Jackets</Link></li>
                     <li className="my-5 text-2xl cursor-pointer"><Link to="/category/shirts" onClick={handleOpen} className="font-sans text-white no-underline">Shirts</Link></li>
                 </ul>
