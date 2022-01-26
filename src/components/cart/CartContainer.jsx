@@ -2,15 +2,14 @@ import { Link } from "react-router-dom"
 import { useCartContext } from "../../context/CartContext"
 import { useState } from "react"
 import CartList from "./CartList"
-import { addDoc, collection, doc, getDoc, getDocs, getFirestore, Timestamp, updateDoc, writeBatch } from 'firebase/firestore'
+import { addDoc, collection, getFirestore, Timestamp } from 'firebase/firestore'
 import { UserForm } from "../form/UserForm"
-import { data } from "autoprefixer"
 
 const Cart = () => {
     const { cartList, deleteCart, total }  = useCartContext()
     
     const totalToPay = cartList.reduce((prev, curr) => prev + curr.quantity * curr.price, 0)
-    
+
     const [warning, setWarning] = useState("")
     const [dataForm, setDataForm] = useState({
         name:"", email: "", phone: "", confirmation: ""
@@ -68,25 +67,7 @@ const Cart = () => {
             .catch(err => console.log(err))
             .finally(deleteCart)
         }
-        
-        
-        //Update.
-        // const docModifier = doc(db, "products", idDelProductoComprado)
-        // updateDoc(docModifier, {
-            //     stock: 2
-            // })
-            // .then(resp => console.log("modified."))
-            // const batch = writeBatch(db)
-            // batch.update(docModifier, {
-                //     stock: 90
-                // })
-                // batch.update(docModifier, {
-                    //     stock: 99
-                    // })
-                    // batch.commit()
-                    
-                }
-                
+    }
     // If the cart is empty, it returns this. 
     if (cartList.length === 0) {
         return  (

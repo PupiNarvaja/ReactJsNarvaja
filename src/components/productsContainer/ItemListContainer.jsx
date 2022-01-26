@@ -10,6 +10,7 @@ const ItemListContainer = ({greeting}) => {
 
     const {id} = useParams()
     
+    //If a category is selected, the SPA will show only those products that match the chosen category.
     useEffect(() => {
         setLoading(true)
         const db = getFirestore()

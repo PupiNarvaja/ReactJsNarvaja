@@ -34,11 +34,6 @@ const App = () => {
                             path="/cart"
                             element={ <Cart /> }
                         />
-                        {/* <Route
-                            exact
-                            path="/favorites"
-                            element={ <Cart /> }
-                        /> */}
                         <Route
                             exact
                             path="*"
